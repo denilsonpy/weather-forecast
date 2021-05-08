@@ -1,4 +1,4 @@
-# Previsaodotempo
+# Weather Forecast
 Um projeto em Python, onde o usuário coloca a localização desejada para obter a previsão do tempo e outros dados do local desejado. As informações aparecem em uma tela amigável para o usuário
 
 Sua API key voce encontra se cadastrando no site  openweathermap.org  após o cadastro procure por API key copie ela e cole no codigo onde esta escrito, # your key
