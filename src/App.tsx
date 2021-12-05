@@ -1,10 +1,10 @@
 import { ThemeProvider } from "./hooks/theme";
-import Dashboad from "./pages/Dashboard";
+import Home from "./pages/Home";
 
 export default function App() {
   return (
     <ThemeProvider>
-      <Dashboad />
+      <Home />
     </ThemeProvider>
   );
 }

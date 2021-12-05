@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import React, { useContext, useState } from "react";
-import { createContext } from "react";
+import React, { useContext, useState, createContext } from "react";
+
 import dark from "../styles/themes/dark";
 import light from "../styles/themes/light";
 
@@ -12,22 +12,21 @@ const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
 const ThemeProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    const themeSaved = localStorage.getItem("@weather-app:theme");
-
-    if (themeSaved) {
-      return JSON.parse(themeSaved);
-    } else {
-      return dark;
-    }
+    const savedTheme = localStorage.getItem("@weather-app:theme");
+    if (savedTheme) return JSON.parse(savedTheme);
+    return light;
   });
 
   const toggleTheme = () => {
-    if (theme.title === "dark") {
-      setTheme(light);
-      localStorage.setItem("@weather-app:theme", JSON.stringify(light));
-    } else {
-      setTheme(dark);
-      localStorage.setItem("@weather-app:theme", JSON.stringify(dark));
+    switch (theme.title) {
+      case "light":
+        setTheme(dark);
+        localStorage.setItem("@weather-app:theme", JSON.stringify(dark));
+        break;
+
+      default:
+        setTheme(light);
+        localStorage.setItem("@weather-app:theme", JSON.stringify(light));
     }
   };
 
@@ -38,10 +37,9 @@ const ThemeProvider: React.FC = ({ children }) => {
   );
 };
 
-function useThemeEdit(): IThemeContext {
+function useThemeUI(): IThemeContext {
   const context = useContext(ThemeContext);
-
   return context;
 }
 
-export { ThemeProvider, useThemeEdit };
+export { ThemeProvider, useThemeUI };
