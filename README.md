@@ -6,7 +6,6 @@
 
 1. [General Info](#general-info)
 2. [Installation](#installation)
-4. [Screenshot](#screenshot)
 
 ### General Info
 
