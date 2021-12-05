@@ -26,8 +26,4 @@ $ yarn install
 $ yarn start
 ```
 
-### Screenshot
-
-![Example-1](https://github.com/denilsonpy/weather-forecast/blob/master/github/images/web-dark.png)
-![Example-2](https://github.com/denilsonpy/weather-forecast/blob/master/github/images/web-light.png)
 
