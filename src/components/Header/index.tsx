@@ -59,7 +59,7 @@ export default function Header() {
               color={theme.colors.primary}
               type="submit"
               fontSize={20}
-              disabled={false}
+              disabled={loading}
               spinner={<Spinner />}
               isLoading={loading}
             >

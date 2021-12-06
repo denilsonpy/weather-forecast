@@ -13,7 +13,6 @@
 
 Project in react that aims to show the user the weather forecast of the desired location
 
-
 ## Installation
 
 ---
@@ -24,5 +23,3 @@ $ cd weather-forecast
 $ yarn install
 $ yarn start
 ```
-
-

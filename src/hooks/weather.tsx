@@ -25,7 +25,7 @@ const WeatherProvider: React.FC = ({ children }) => {
 
   const getWeather = async (city: string) => {
     const { data } = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?APPID=0c0ad50ddf868106c02fd2a3357574e3&q=${city}&units=metric`
+      `https://denilsonpy-projects-api.herokuapp.com/weather/${city}`
     );
     setWeather(data);
   };
