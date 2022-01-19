@@ -3,6 +3,9 @@
 
 <br/>
 
+## Star chart
+<img src="https://starchart.cc/denilsonpy/weather-forecast.svg"/>
+
 ## Table of Contents
 
 1. [General Info](#general-info)
